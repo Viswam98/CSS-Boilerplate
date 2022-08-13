@@ -42,6 +42,26 @@ body {
     background-color: rgb(84, 82, 82);
 }
 
+/* .x:nth-of-type(1) {
+transition: all 100ms ease-in-out;
+transform: rotate(45deg);
+transform-origin: top left;
+width: 28px;
+}
+
+.x:nth-of-type(2) {
+transition: all 100ms ease-in-out;
+transform-origin: center;
+width: 0;
+}
+
+.x:nth-of-type(3) {
+transition: all 100ms ease-in-out;
+transform: rotate(-45deg);
+transform-origin: bottom left;
+width: 28px;
+} */
+
 
 
 .toggle-button {
@@ -53,6 +73,7 @@ body {
     justify-content: space-between;
     width: 30px;
     height: 20px;
+    transition: all .4s ease-in-out;
 }
 
 .toggle-button .bar{
@@ -60,17 +81,38 @@ body {
     width: 100%;
     background-color: white;
     border-radius: 10px;
+    transition: all .5s ease-in-out;
 }
+
+
+.toggle-button .bar.first.x {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 26px;
+}
+
+.toggle-button .bar.middle.x {
+    transform: translateX(-4rem);
+    transform-origin: center;
+    width: 0;
+}
+
+.toggle-button .bar.last.x {
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    width: 26px;
+
+}
+
 
 @media (max-width: 450px) {
     .toggle-button {
         display: flex;
-        transition: .4s;
     }
 
-    .toggle-button.rotate {
+    /* .toggle-button.rotate {
         transform: rotate(90deg);
-    }
+    } */
 
     .navbar-links {
         display: none;
